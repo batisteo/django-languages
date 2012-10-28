@@ -51,7 +51,7 @@ def regenerate(location='http://www.iana.org/assignments/language-subtag-registr
             p = line.partition(':')
             info[p[0]] = paren.sub('', p[2]).strip()
 
-    languages_lines = map(lambda x:'("%s", _("%s")),'%(x['Subtag'],x['Description']), languages)
+    languages_lines = map(lambda x:'("%s", _(u"%s")),'%(x['Subtag'],x['Description']), languages)
 
     # Generate and save the file.
     if not filename:
