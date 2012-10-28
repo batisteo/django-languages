@@ -25,7 +25,7 @@ setup(
     packages=find_packages(),
     zip_safe=False,
     package_data={'django_languages': [
-    #    'bin/*.py',
+        'bin/*.py',
     #    'locale/*/LC_MESSAGES/*',
     ]},
     # titlecase PYPI is broken, copied the module directly for now (in /bin)
