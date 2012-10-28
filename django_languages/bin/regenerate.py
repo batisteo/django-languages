@@ -49,7 +49,8 @@ def regenerate(location='http://www.iana.org/assignments/language-subtag-registr
             info[p[0]] = paren.sub('', p[2]+line).strip()
         else:
             p = line.partition(':')
-            info[p[0]] = paren.sub('', p[2]).strip()
+            if not p[0] in info: # Keep the first description as it should be the most common
+                info[p[0]] = paren.sub('', p[2]).strip()
 
     languages_lines = map(lambda x:'("%s", _(u"%s")),'%(x['Subtag'],x['Description']), languages)
 
