@@ -21,15 +21,12 @@ setup(
     long_description=long_description(),
     author='Ander Martinez',
     author_email='ander.basaundi@gmail.com',
-    url='http://bitbucket.org/oredakore/django-languages/',
+    url='http://bitbucket.org/basaundi/django-languages/',
     packages=find_packages(),
     zip_safe=False,
     package_data={'django_languages': [
         'bin/*.py',
-    #    'locale/*/LC_MESSAGES/*',
     ]},
-    # titlecase PYPI is broken, copied the module directly for now (in /bin)
-    #      requires=['titlecase'],
     classifiers=[
         'Development Status :: 4 - Beta',
         'Environment :: Web Environment',
